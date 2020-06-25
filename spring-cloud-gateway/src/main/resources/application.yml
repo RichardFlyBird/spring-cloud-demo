@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: baidu_route
+          uri: https://www.baidu.com/
+          predicates:
+            - Query=url,baidu
+
+        - id: xinlang_route
+          uri: https://www.sina.com.cn/
+          predicates:
+            - Query=url,xinlang
